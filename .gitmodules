@@ -3,19 +3,19 @@
 	url = https://github.com/openssl/openssl.git
 [submodule "tests/suite/tls-fuzzer/tlsfuzzer"]
 	path = tests/suite/tls-fuzzer/tlsfuzzer
-	url = https://github.com/tomato42/tlsfuzzer.git
+	url = https://github.com/tanersener/tlsfuzzer.git
 [submodule "tests/suite/tls-fuzzer/python-ecdsa"]
 	path = tests/suite/tls-fuzzer/python-ecdsa
-	url = https://github.com/warner/python-ecdsa
+	url = https://github.com/tanersener/python-ecdsa.git
 [submodule "tests/suite/tls-fuzzer/tlslite-ng"]
 	path = tests/suite/tls-fuzzer/tlslite-ng
-	url = https://github.com/tomato42/tlslite-ng.git
+	url = https://github.com/tanersener/tlslite-ng.git
 [submodule "gnulib"]
 	path = gnulib
-	url = https://gitlab.com/libidn/gnulib-mirror.git
+	url = https://github.com/tanersener/gnulib.git
 [submodule "devel/nettle"]
 	path = devel/nettle
-	url = https://gitlab.com/gnutls/nettle.git
+	url = https://github.com/tanersener/nettle.git
 [submodule "devel/libtasn1"]
 	path = devel/libtasn1
-	url = https://gitlab.com/gnutls/libtasn1.git
+	url = https://github.com/tanersener/libtasn1.git
