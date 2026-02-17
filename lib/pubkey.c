@@ -478,9 +478,9 @@ cleanup:
 	return ret;
 }
 
-static int gnutls_pubkey_import_ecc_eddsa(gnutls_pubkey_t key,
-					  const gnutls_datum_t *parameters,
-					  const gnutls_datum_t *ecpoint)
+int _gnutls_pubkey_import_ecc_eddsa(gnutls_pubkey_t key,
+				    const gnutls_datum_t *parameters,
+				    const gnutls_datum_t *ecpoint)
 {
 	int ret, tag_len, len_len;
 	long data_len;
@@ -753,8 +753,8 @@ int gnutls_pubkey_import_pkcs11(gnutls_pubkey_t key, gnutls_pkcs11_obj_t obj,
 		break;
 	case GNUTLS_PK_EDDSA_ED25519:
 	case GNUTLS_PK_EDDSA_ED448:
-		ret = gnutls_pubkey_import_ecc_eddsa(key, &obj->pubkey[0],
-						     &obj->pubkey[1]);
+		ret = _gnutls_pubkey_import_ecc_eddsa(key, &obj->pubkey[0],
+						      &obj->pubkey[1]);
 		break;
 	case GNUTLS_PK_ECDH_X25519:
 		ret = gnutls_pubkey_import_ecc_ecdh(key, &obj->pubkey[0],
