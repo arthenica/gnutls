@@ -83,6 +83,8 @@ static void client_handshake(gnutls_session_t session,
 		success("client: Success: Session was NOT resumed\n");
 
 	if (!resume) {
+		gnutls_free(session_data->data);
+		session_data->data = NULL;
 		if ((ret = gnutls_session_get_data2(session, session_data)) <
 		    0) {
 			fail("client: Could not get session data\n");

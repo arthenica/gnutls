@@ -191,6 +191,8 @@ static void client(int fd, int *resumption_should_succeed,
 			gnutls_certificate_free_credentials(clientx509cred);
 		gnutls_deinit(session);
 	}
+
+	gnutls_free(session_data.data);
 }
 
 static void server(int fd, int *resumption_should_succeed,
